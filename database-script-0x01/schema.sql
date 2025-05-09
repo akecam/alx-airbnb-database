@@ -31,9 +31,7 @@ CREATE TABLE IF NOT EXISTS `User` (
     password_hash VARCHAR(255) NOT NULL,
     phone_number VARCHAR(20) NULL,
     role ENUM('guest', 'host', 'admin') NOT NULL,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-
-    INDEX(user_id)
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB;
 
 
@@ -55,8 +53,7 @@ CREATE TABLE IF NOT EXISTS `Property` (
     CONSTRAINT fk_property_host
         FOREIGN KEY (host_id)
         REFERENCES `User`(user_id)
-        ON DELETE CASCADE,
-    INDEX(property_id)
+        ON DELETE CASCADE
 ) ENGINE=InnoDB;
 
 
@@ -82,9 +79,7 @@ CREATE TABLE IF NOT EXISTS `Booking` (
     CONSTRAINT fk_booking_user
         FOREIGN KEY (user_id)
         REFERENCES `User`(user_id)
-        ON DELETE CASCADE,
-
-    INDEX(booking_id)
+        ON DELETE CASCADE
 ) ENGINE=InnoDB;
 
 
@@ -104,9 +99,7 @@ CREATE TABLE IF NOT EXISTS `Payment` (
     CONSTRAINT fk_payment_booking
         FOREIGN KEY (booking_id)
         REFERENCES `Booking`(booking_id)
-        ON DELETE CASCADE,
-
-    INDEX(payment_id)
+        ON DELETE CASCADE
 ) ENGINE=InnoDB;
 
 
