@@ -7,3 +7,11 @@ CREATE INDEX idx_booking_id ON Booking(booking_id);
 
 -- Indexes for the User table
 CREATE INDEX idx_user_id ON User(user_id);
+
+
+-- Mesaure Query Performance
+EXPLAIN ANALYZE
+SELECT 
+    Property.property_id AS prop_id,
+    (SELECT COUNT(*) FROM Booking WHERE Booking.property_id = Property.property_id) AS sum_of_bookings
+FROM Property;
