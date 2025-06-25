@@ -87,6 +87,7 @@
     * `property_id` in the Property and Booking tables.
     * `booking_id` in the Booking and Payment tables.
 
+# ERD Image
 ![visual_relationship](https://github.com/user-attachments/assets/75020536-b6f6-430f-ad8a-2afef1ff4be1)
 
 
