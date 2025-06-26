@@ -1,6 +1,11 @@
-## Define Entities and Relationships in ER Diagram
+## Normalization of Database Design
+
+Normalization is the act of removing redundacies from a data entity and maintaining data integrity and consistency. After checking the ER diagram and the Entities and attributes provided, they follow normalization standard by being atomic, uniquely identified by an ID and their relationship established through foreign keys. Below is the image of the ERD again:
+
+# ER Diagram of Entities and their Attributes
+
+![visual_relationship](https://github.com/user-attachments/assets/09b35d6a-2164-4de4-bdda-44a5ac49cd43)
 
 
-![Screenshot from 2025-04-17 00-34-45](https://github.com/user-attachments/assets/9cf34e4d-1ee3-4b45-a3a1-5279d22c3181)
 
 
