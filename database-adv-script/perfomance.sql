@@ -56,7 +56,7 @@ JOIN
     Payment ON
         Payment.booking_id = Booking.booking_id
 WHERE 
-    Property.pricepernight < 1000.00;
+    Property.pricepernight < 1000.00 AND 1 = 1;
 
 -- Check Estimates time it took to loop through the table in the tree and
 -- create index where needed
